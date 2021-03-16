@@ -1,20 +1,14 @@
+#투포인터 알고리즘으로 해결
 def solution(people, limit):
     people.sort(reverse=True)
-    visited=[0 for i in range(len(people))]
-    answer=greedy(people,visited,limit)
-    return answer
-def greedy(people, visited, limit):
     answer=0
-    for i in range(len(people)):
-        if(0 not in visited):
-            return answer
-        if(visited[i]==0 and people[i]<=limit):
-            visited[i]=1
-            for j in range(len(people)-1,i,-1):
-                if (visited[j] == 0 and people[j] <= limit-people[i]):
-                    visited[j] = 1
-                    break
-            answer+=1
+    i = 0
+    j = len(people) - 1
+    while (i <= j):
+        if (people[j] <= limit - people[i]):
+            j-=1
+        i+=1
+        answer += 1
     return answer
 print(solution([70, 50, 80, 50],100))
 print(solution([70, 80, 50],100))
