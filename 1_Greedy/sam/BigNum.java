@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BigNum {
     public static void main(String[] args) throws IOException {
         ArrayList<Integer> list = new ArrayList<>();
 
