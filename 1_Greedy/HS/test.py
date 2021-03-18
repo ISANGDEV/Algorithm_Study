@@ -16,14 +16,3 @@ number = list(map(int,input().split()))
 #print(number[len(number)-1])
 print("M,K입력")
 condition = list(map(int,input().split()))
-
-number.sort() #가장 큰 수와 그 다음 큰 수만이 필요함
-
-while count < condition[0]: # K번 만큼 더할꺼니까, 더한 횟수가 몇 번인지 확인해 줘야함.
-    for i in range(condition[1]): # 가장 큰 수를 K번 더하기.
-        sum = sum + number[len(number)-1]
-        count = count + 1
-    sum = sum + number[len(number)-2] # 가장 큰수 K번 더하면, 그 다음 수를 1번만 더해줌
-    count= count + 1
-
-print(sum)
