@@ -26,7 +26,6 @@ public class Main {
         //List-> int[] 로 변환 (Stream 이해 더 필요)
         result = sol.solution(n, lost.stream().mapToInt(Integer::intValue).toArray(), reserve.stream().mapToInt(Integer::intValue).toArray());
 
-
         System.out.println(result);
 
         bw.flush();
