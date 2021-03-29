@@ -27,14 +27,38 @@ for i in range(count):
 most = list(dict.items())
 most.sort(key = lambda x:x[1])
 
-for i in range(len(most)-1):
+most_count = max([most[i][1] for i in range(len(most))])
+most_list = []
+
+if len(most) == 1 :
+    most_result = most[0][0]
+
+else :
+    for i in range(len(most)):
+        if most[i][1] == most_count:
+            most_list.append(most[i][0])
+
+    most_list.sort()
+
+    if len(most_list) == 1:
+        most_result = most_list[0]
+    else :
+        most_result = most_list[1]
+
+
+
+
+
+"""for i in range(len(most)-1):
     cmp = most[i][1]
     temp = most[i+1][1]
     if cmp < temp :
-        continue
-    elif cmp == temp :
-        most_result = most[i+1][0]
+        most_result = most[i][0]
         break
+
+    elif cmp == temp :
+        continue"""
+
 
 range = number[-1] - number[0]
 
