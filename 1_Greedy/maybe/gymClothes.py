@@ -1,7 +1,6 @@
 # 빌려주는 사람 입장에서 보면 되는걸 빌리는 입장에서 봐서 우선순위 정하고 혼자 쌩쇼함
 # 코드 구상 시간을 조금 더 잡고, 찬찬히 생각해볼 것
 
-
 def process(lost, reserve):
     answer = 0
     for i in lost:
