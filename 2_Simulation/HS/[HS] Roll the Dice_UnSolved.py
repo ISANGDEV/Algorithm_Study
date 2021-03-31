@@ -10,25 +10,41 @@ def turn_1(): # 동
     global pos_now
     global dice
     pos_now[1] = pos_now[1] + 1
-    dice[0],dice[2],dice[5],dice[3] = dice[3],dice[0],dice[2],dice[5]
+    dice_old = dice
+    dice[0] = dice_old[3]
+    dice[2] = dice_old[0]
+    dice[5] = dice_old[2]
+    dice[3] = dice_old[5]
     print(dice)
 def turn_2(): # 서
     global pos_now
     global dice
     pos_now[1] = pos_now[1] - 1
-    dice[3],dice[0],dice[5],dice[2] = dice[0],dice[2],dice[3],dice[5]
+    dice_old = dice
+    dice[3] = dice_old[0]
+    dice[0] = dice_old[2]
+    dice[5] = dice_old[3]
+    dice[2] = dice_old[5]
     print(dice)
 def turn_3(): # 북
     global pos_now
     global dice
     pos_now[0] = pos_now[0] - 1
-    dice[0],dice[1],dice[5],dice[4] = dice[4],dice[0],dice[1],dice[5]
+    dice_old = dice
+    dice[0] = dice_old[4]
+    dice[1] = dice_old[0]
+    dice[5] = dice_old[1]
+    dice[4] = dice_old[5]
     print(dice)
 def turn_4(): # 남
     global pos_now
     global dice
     pos_now[0] = pos_now[0] + 1
-    dice[0],dice[4],dice[1],dice[5]= dice[1],dice[0],dice[5],dice[4]
+    dice_old = dice
+    dice[0] = dice_old[1]
+    dice[4] = dice_old[0]
+    dice[1] = dice_old[5]
+    dice[5] = dice_old[4]
     print(dice)
 
 
