@@ -16,25 +16,25 @@ def dfs(geo,x,y):
     global n
     global m
 
-    if x < 0 or x >= n or y < 0 or y >= m :
+    if x < 0 or x >= n or y < 0 or y >= m : # 반복문 돌리기 전에 index 에러 안나게 범위 확인
         return;
-    if geo[x][y] == (1 or 2) :
+    if geo[x][y] == (1 or 2) : # 벽이나, 방문한 곳이라면
         return;
 
-    if geo[x][y] == 0 :
-        geo[x][y] = 2
+    if geo[x][y] == 0 : # 방문하지 않았다면
+        geo[x][y] = 2 # 2 : 방문하고
         dfs(geo,x-1,y)
         dfs(geo,x+1,y)
         dfs(geo,x,y-1)
-        dfs(geo,x,y+1)
-        return 1
+        dfs(geo,x,y+1) # 주변 부분으로 방문해 나간다.
+        return 1 # 방문하지 않았던 곳이라면 1을 반환하고
     return 0
 
 result = 0
 
 for i in range(n):
     for j in range(m):
-        if dfs(geo,i,j) == 1 :
-            result = result + 1
+        if dfs(geo,i,j) == 1 : # 방문하지 않았던 영역이라면
+            result = result + 1 # 아이스크림 만들 수 있음
 
 print(result)
