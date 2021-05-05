@@ -24,4 +24,5 @@ for i in set(sNums_sum.values()):
 
 sNums = sorted(sNums, key=lambda x: len(x))
 
-print(sNums)
+for i in sNums:
+    print(i)
