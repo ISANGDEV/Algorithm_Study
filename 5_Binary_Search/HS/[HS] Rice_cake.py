@@ -1,33 +1,28 @@
-def partition(list,st,ed):
-    pivot = list[st]
-    left = st + 1
-    right = ed
-    while 1 :
-        while left <= right and list[left] <= pivot:
-            left += 1
-        while left <= right and list[right] > pivot:
-            right -= 1
+import sys
 
-        if right < left :
-            break
+"""n,m = map(int,sys.stdin.readline().split())
 
-        else:
-            list[left], list[right] = list[right],list[left]
-    list[st],list[right] = list[right],list[st]
+length = list(map(int,sys.stdin.readline.split()))
 
-    return right # 새로운 pivot 값
+result = 0
+"""
+def binary_searching(length,m):
+    low = 0
+    high = max(length)
 
-def kth(a,k):
-    stack = [[0,len(a)-1]]
-    l = a
+    while low <= high:
+        sum = 0
+        criteria = (low + high) // 2
+        for i in length:
+            if i > criteria:
+                sum += i - criteria
 
-    while stack:
-        left,right = stack.pop()
-        pivot = partition(l,left,right)
+        if sum < m: # 절단기 높이를 낮춰야 함.
+            high = criteria - 1
+        else: # 절단기 높이를 높여도 됨.
+            result = criteria
+            low = criteria + 1
 
-        if pivot+1 == k:
-            return a[pivot]
-        elif pivot +1 < k:
-            stack.append([pivot+1,right])
-        else:
-            stack.append([left,pivot-1])
+    print(result)
+
+binary_searching([19,15,10,17],6)
