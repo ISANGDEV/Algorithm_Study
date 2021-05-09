@@ -1,0 +1,31 @@
+oe,oem,om,omh,oh=map(int,input().split())
+total=oe+oem+om+omh+oh
+left=min(oe,om,oh)
+right=total//3
+answer=left
+while(left<=right):
+    e,em,m,mh,h=oe,oem,om,omh,oh
+    count=0
+    mid=(left+right)//2
+    if(e>=mid):
+        count+=1
+        m+=em
+    elif(e+em>=mid):
+        count+=1
+        m+=(e+em-mid)
+    if(m>=mid):
+        count+=1
+        h+=mh
+    elif(m+mh>=mid):
+        count+=1
+        h+=(m+mh-mid)
+    if(h>=mid):
+        count+=1
+    if(count==3):
+        left=mid+1
+        answer=max(answer,mid)
+    else:
+        right=mid-1
+print(answer)
+
+
