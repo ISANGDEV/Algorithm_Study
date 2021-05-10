@@ -28,7 +28,7 @@ for i in range(n):
 
 house.sort()
 
-left = 0
-right = house[-1] - house[0]
+left = 0 # 가능한 범위 최소 
+right = house[-1] - house[0] #범위 최대
 
 print(binary(left,right,c))
