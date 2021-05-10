@@ -17,7 +17,7 @@ def binary(left,right,c):
         elif temp < c : # 공유기가 너무 적다면
             right = middle - 1 # 거리를 줄이고
             
-    return right # 거리 최댓값 반환하라고 했으니까 가능한 범위에서 최댓값 반환
+    return right # 결과 반환
 
 n,c = map(int,sys.stdin.readline().split())
 house = []
