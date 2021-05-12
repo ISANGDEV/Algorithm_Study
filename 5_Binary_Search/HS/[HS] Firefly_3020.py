@@ -11,7 +11,8 @@ def binary(obstacle,target):
 
     return len(obstacle) - right - 1 # 부딪히는 장애물 다음부터는 다 부딪히니까
 # 전체 갯수에서 - 부딪힌 장애물 index 빼주고, 0에서 index가 시작하니까 1 더 빼주고
-
+# ㅁㅁㅁright "부딪힌 장애물" leftㅁㅁㅁㅁㅁ -> -right -1 하던, -left 하던 둘다 ㅇㅋ
+# 이진탐색하고 index 결과 이해하기
     # 123 456
     # len : 6 / middle = 2 2.5
 
