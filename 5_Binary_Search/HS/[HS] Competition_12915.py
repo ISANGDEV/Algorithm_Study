@@ -15,7 +15,7 @@ def binary(left,right,e,em,m,mh,h):
         mid = m
         midhi = mh
         high = h
-        middle = (left + right) // 2 # 문제 횟수 설정
+        middle = (left + right) // 2 # 문제 대회 설정
         easy -= middle
         mid -= middle
         high -= middle # 일단 다 빼고
