@@ -14,8 +14,6 @@ class 2193 {
         StringTokenizer st;
 
         int n = Integer.parseInt(br.readLine());
-        //계산 상 맞는데 제출 시 틀려서, 답을 보니 int로 부족하다고 한다.
-        //숫자가 부족해서 틀릴 때, int 자료형의 크기가 부족한지 계산하는 방법에 대해서는 모르겠음. 
         long[] arr = new long[n+1];
         if(n <= 2)
             bw.write('1');

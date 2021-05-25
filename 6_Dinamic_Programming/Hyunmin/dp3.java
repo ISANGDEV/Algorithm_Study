@@ -9,6 +9,8 @@ class Main {
         dpTable[1] = Math.max(input[0], input[1]);
 
         for (int i = 2; i < x; i++) {
+            //1 3 1 5
+            //인덱스 0부터 최대 값 Max 구하면서 저장
             //이전꺼 vs 이이전꺼 + 현재(한칸 떨어져있기 때문에 현재꺼를 추가해서 비교해줘야 함)
             dpTable[i] = Math.max(dpTable[i-1], dpTable[i-2] + input[i]);
         }
