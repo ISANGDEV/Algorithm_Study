@@ -1,3 +1,4 @@
+메모리 초과
 import sys
 inf = int(1e9)
 v,e = map(int,sys.stdin.readline().split())
