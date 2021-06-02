@@ -1,4 +1,4 @@
-메모리 초과
+#메모리 초과, 다익스트라로 해야할 듯
 import sys
 inf = int(1e9)
 v,e = map(int,sys.stdin.readline().split())
