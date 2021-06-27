@@ -2,7 +2,9 @@
 파일 형식([jongmin]Simulation.md, [jongmin]number_cardgame.py ...)
 
 ## 실전문제
-업데이트 요망
+1) p.298 팀 결성
+2) p.300 도시 분할 계획
+3) p.303 커리큘럼
 
 #### 백준
 1774(우주신과의 교감): https://www.acmicpc.net/problem/1774
