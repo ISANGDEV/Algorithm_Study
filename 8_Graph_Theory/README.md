@@ -1,4 +1,4 @@
-# Dynamic Programming
+# Graph Theory
 파일 형식([jongmin]Simulation.md, [jongmin]number_cardgame.py ...)
 
 ## 실전문제
