@@ -1,5 +1,5 @@
 import sys
-
+#
 n, m = sys.stdin.readline().rstrip().split()
 data = list(map(int, sys.stdin.readline().rstrip().split()))
 
