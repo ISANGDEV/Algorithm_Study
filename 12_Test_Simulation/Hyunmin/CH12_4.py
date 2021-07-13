@@ -13,7 +13,6 @@ def solution(key, lock):
         main_map.turn()  # 시계 방향 90도 회전
     return False
 
-
 class Map:
     # 해당 lock ( M * M ) 에서 (M*3 * M*3) 만큼 만들어 놓고 key 이동시키기 and 돌리기하며 find 하는 방식 ?
     # -> 비효율적. 가능할지 모르겠다. -> 확인 해 보니, 파이썬에서 초당 2000만에서 1억 번의 연산이 가능하여 위 방식 가능할듯.
@@ -73,4 +72,4 @@ class Map:
             for j in range(self.key_size):
                 new_arr[j][((self.key_size - 1) - i)] = self.key[i][j]
         self.key = new_arr
-# print(solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]]))
+# print(solution([[0, 0, 0], [1, 0, 0]
