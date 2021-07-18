@@ -18,7 +18,6 @@ def bfs(visited, start_x, start_y):
         # 큐에서 하나의 원소를 뽑아 출력
         v = queue.popleft()
         # 해당 원소와 연결된, 아직 방문하지 않은 원소들을 큐에 삽입
-        # visited[v[0]][v[1]] = True
         # 상 하 좌 우 확인 후 추가
         for i in range(4):
             # 범위 오류
@@ -44,14 +43,17 @@ for i in range(n):
         pos.append((i, j))
 wall_cases = list(itertools.combinations(pos, 3))
 
-big = -1
+big = 0
 for x, y, z in wall_cases:
-    # set wall 0 -> 3, 1 -> 4, 2 -> 5
+
     visited = [[False] * m for _ in range(n)]
 
     for i in range(n):
         for j in range(m):
             if map_arr[i][j] == 1:
+                visited[i][j] = True
+            # 코드 수정
+            if map_arr[i][j] == 2:
                 visited[i][j] = True
 
     if visited[x[0]][x[1]] or visited[y[0]][y[1]] or visited[z[0]][z[1]]:
@@ -72,6 +74,7 @@ for x, y, z in wall_cases:
         for j in range(m):
             if not visited[i][j]:
                 count += 1
+
     big = max(big, count)
     # remove wall
 print(big)
