@@ -1,0 +1,5 @@
+N=int(input())
+houses=list(map(int,input().split()))
+houses.sort()
+L=len(houses)
+print(houses[L//2-1])
