@@ -1,5 +1,5 @@
 import sys
-
+# loop 
 def bst(target, start, end):
     while start <= end:
         mid = (start + end) // 2
@@ -14,7 +14,7 @@ def bst(target, start, end):
 N = int(input())
 nums = list(map(int, sys.stdin.readline().split()))
 fixed_point = bst(N//2, 0, N)
-print(fixed_point) if fixed_point else print(-1) 
+print(fixed_point) if fixed_point else print(-1)
 
 
 
