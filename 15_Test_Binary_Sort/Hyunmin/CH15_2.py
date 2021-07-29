@@ -1,5 +1,5 @@
 import sys
-# loop 
+#  loop 
 def bst(target, start, end):
     while start <= end:
         mid = (start + end) // 2
