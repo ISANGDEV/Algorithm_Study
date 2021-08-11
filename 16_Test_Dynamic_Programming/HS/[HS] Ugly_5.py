@@ -1,5 +1,4 @@
 import sys
-import heapq
 
 dp = [0] * (n+1)
 a = 2
