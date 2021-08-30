@@ -1,4 +1,4 @@
-Algorithm_Study
+# Algorithm_Study
 실전문제 Graph Theory
 파일 형식([jongmin]Simulation.md, [jongmin]number_cardgame.py ...)
 
