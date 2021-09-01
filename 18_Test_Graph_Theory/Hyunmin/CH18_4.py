@@ -40,26 +40,10 @@ for i in range(0, N-1):  # i + 1 사용하므로 N 전까지
     edges.append((abs(z[i+1][0] - z[i][0]), z[i+1][1], z[i][1]))  # z cost, 출발 a, 도착 b 
 edges.sort()
 
-# edges에 x 3->4->1->2->5 , y 3->4->5->2->1, z 4->3->1->2->5 
 
 result = 0
 for edge in edges:
     cost, a, b = edge 
-    # cost 낮은 순으로 정렬해서 아래와 다름 
-    # 낮은것부터 있다고 가정 
-    # 낮은것부터 계산하기 때문에 추후 값들은 거의 다 넘어감 ? 
-
-    # X 
-    # 11, 3, 4 = !parent = union 3 <- 4 
-    # 1, 4, 1 = !parent = union  1 <- 4 
-    # 3, 1, 2 = !parent = union 1 <- 2 
-    # 5, 2, 5 = !parent = union 2 <- 5 
-
-    # Y 
-    # 3, 3, 4 = !parent = (현 parent 4=1 3=3 ) union 3 -> 4 (-> 1) 
-    # 0, 4, 5 = !parent = union 5-> 4 (4->1) 
-    # 1, 5, 2 = Oparent (부모가 같음 이미 연결되어있고 얘의 Cost 는 세지 않는다 ?) 
-    # 10, 2, 1 
 
     if find_parent(parent, a) != find_parent(parent, b):
         union_parent(parent, a, b)
