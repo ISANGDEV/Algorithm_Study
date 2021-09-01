@@ -25,11 +25,12 @@ for i in range(N):
             union_parent(parent, i + 1, j + 1)
 
 tf = 'YES' 
-for i in range(1, N):
-    if find_parent(parent, i) != find_parent(parent, i + 1): 
+for i in range(0, M):
+    if find_parent(parent, path[i]) != find_parent(parent, path[i+1]): 
         tf = 'NO'
         break 
 print(tf)
+
 
 
 
